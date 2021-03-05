@@ -1,0 +1,13 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: base
+packageMetadata:
+  shortDescription: Base config for Environs
+openAPI:
+  definitions:
+    io.k8s.cli.setters.username:
+      x-k8s-cli:
+        setter:
+          name: username
+          value: tenant-user@example.com
