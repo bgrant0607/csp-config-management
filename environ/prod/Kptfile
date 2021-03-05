@@ -1,0 +1,20 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: base
+upstream:
+  type: git
+  git:
+    commit: 8d8594c99fa232bdcba1d44c7d907ed2782c2ef7
+    repo: https://github.com/bgrant0607/csp-config-management
+    directory: environ/base
+    ref: 1.0.0
+packageMetadata:
+  shortDescription: Base config for Environs
+openAPI:
+  definitions:
+    io.k8s.cli.setters.username:
+      x-k8s-cli:
+        setter:
+          name: username
+          value: tenant-user@example.com
