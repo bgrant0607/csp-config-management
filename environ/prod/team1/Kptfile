@@ -2,6 +2,8 @@ apiVersion: kpt.dev/v1alpha1
 kind: Kptfile
 metadata:
   name: tenant
+  annotations:
+    configmanagement.gke.io/managed: disabled
 upstream:
   type: git
   git:
